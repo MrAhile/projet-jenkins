@@ -1,6 +1,3 @@
-/* import shared library */
-@Library('Bah27-share-library')_
-
 pipeline {
     environment {
         IMAGE_NAME = "applicationweb"
@@ -88,12 +85,5 @@ pipeline {
           }
        }
      }
-  }
-  post {
-     always {
-       script {
-         slackNotifier currentBuild.result
-     }
-    }
   }
 }
